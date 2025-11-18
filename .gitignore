@@ -263,6 +263,18 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
+
+.Bin
+Bin
+bin
+.OBJ
+Obj
+obj
+.ARTIFACTS
+Artifacts
+artifacts
+
+
 # NuGet Packages
 *.nupkg
 # NuGet Symbol Packages

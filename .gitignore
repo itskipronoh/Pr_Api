@@ -25,7 +25,17 @@ bld/
 
 Obj/
 OBJ/
+bin//
+Bin/    
+bin/
+.Bin    
+.OBJ
+.ARTIFACTS
+Artifacts   
 
+Obj
+obj
+bin
 
 # .NET Core
 project.lock.json

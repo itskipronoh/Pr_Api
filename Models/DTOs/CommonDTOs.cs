@@ -36,22 +36,22 @@ public class RegisterUserDTO
 
 public class KpiDto
 {
-    public string Name { get; set; }  // e.g. "Increase revenue by 10%"
+    public required string Name { get; set; }  // e.g. "Increase revenue by 10%"
     public string? MeasurementUnit { get; set; } // optional
     public decimal? TargetValue { get; set; }    // optional
 }
 // Exco Create Goal DTOs
 public class GoalCreateDto
 {
-    public string Title { get; set; }
-    public string Description { get; set; }
+    public required string Title { get; set; }
+    public required string Description { get; set; }
     public GoalCategory Category { get; set; }
     public decimal Weight { get; set; }
 
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
 
-    public List<KpiDto> KPIs { get; set; }
+    public required List<KpiDto> KPIs { get; set; }
 }
 
 // Exco Approve/Reject Goal DTO
@@ -66,23 +66,23 @@ public class GoalApprovalDto
 
 public class GoalUpdateDto
 {
-    public string Title { get; set; }
-    public string Description { get; set; }
+    public required string Title { get; set; }
+    public required string Description { get; set; }
     public GoalCategory Category { get; set; }
     public decimal Weight { get; set; }
 
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
 
-    public List<KpiDto> KPIs { get; set; }
+    public required List<KpiDto> KPIs { get; set; }
 }
 
 public class GoalResponseDto
 {
     public int Id { get; set; }
 
-    public string Title { get; set; }
-    public string Description { get; set; }
+    public required string Title { get; set; }
+    public required string Description { get; set; }
     public GoalCategory Category { get; set; }
     public decimal Weight { get; set; }
 
@@ -91,7 +91,7 @@ public class GoalResponseDto
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
 
-    public List<KpiDto> KPIs { get; set; }
+    public required List<KpiDto> KPIs { get; set; }
 
     public string? ApprovalComment { get; set; }
     public int? ApprovedBy { get; set; }

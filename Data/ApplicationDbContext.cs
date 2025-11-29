@@ -22,6 +22,16 @@ namespace PR.Data
                 .Property(u => u.Role)
                 .HasConversion<string>(); // store enum as a string
 
+            // Configure decimal precision for Goal.Weight (e.g., 99.99 - percentage)
+            modelBuilder.Entity<Goal>()
+                .Property(g => g.Weight)
+                .HasPrecision(3, 2); // 5 total digits, 2 decimal places (max: 999.99)
+
+            // Configure decimal precision for KPI.TargetValue
+            modelBuilder.Entity<KPI>()
+                .Property(k => k.TargetValue)
+                .HasPrecision(3, 2); // 18 total digits, 2 decimal places (standard for money/metrics)
+
             base.OnModelCreating(modelBuilder);
             // seed data 
             SeedData(modelBuilder, GetKPIs());
